@@ -1,0 +1,30 @@
+{
+  "pra_dh": {
+    "path": "artifacts/pra_dh.pt.gz",
+    "sha256": "e2f6d6a13dbbf4773fcbe3f62232c3f5bf0e106b999561ac36bae01564a23d58",
+    "source_sha256": "c10c065892e0f7a9de6d9ba5b7e6aa95bd61165c8abebfd048e2eb72350e6be8",
+    "metadata_anonymized": true,
+    "tensors_unchanged": true
+  },
+  "pra_ad": {
+    "path": "artifacts/pra_ad.pt.gz",
+    "sha256": "cb313a86ff4fc4e4229512e792b2a782450c0428781066273e8d6e6b51fe88cc",
+    "source_sha256": "0deee2b76649bfcc30e93c9abcaf8367f9264126dd7d3783b4dca45d20d2f977",
+    "metadata_anonymized": true,
+    "tensors_unchanged": true
+  },
+  "psv_round0": {
+    "path": "artifacts/psv_round0.pt.gz",
+    "sha256": "6eb7c5a7be8885d5ee15b7e77d97693b37176277fe98bfbdb2bf8f7e77cc2120",
+    "source_sha256": "70306088ddfd8feae2af6fe6c30ed14052b2269453721e28e0b05dc6c300a52f",
+    "metadata_anonymized": true,
+    "tensors_unchanged": true
+  },
+  "psv_round1": {
+    "path": "artifacts/psv_round1.pt.gz",
+    "sha256": "e3869e837b534495bd97d534189918ff85b16484eca33efe615ac234035461ac",
+    "source_sha256": "17a7bdd2fd6643a0fdc60905109309421ce20ffda20f50f632638b49016abb3e",
+    "metadata_anonymized": true,
+    "tensors_unchanged": true
+  }
+}
