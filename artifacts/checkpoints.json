@@ -15,16 +15,18 @@
   },
   "psv_round0": {
     "path": "artifacts/psv_round0.pt.gz",
-    "sha256": "6eb7c5a7be8885d5ee15b7e77d97693b37176277fe98bfbdb2bf8f7e77cc2120",
+    "sha256": "3b8cf9179130b2e0edd593c927fb15d6c89e42c797edc4ab1e9d3ce988ce1d8d",
     "source_sha256": "70306088ddfd8feae2af6fe6c30ed14052b2269453721e28e0b05dc6c300a52f",
     "metadata_anonymized": true,
-    "tensors_unchanged": true
+    "tensors_unchanged": true,
+    "result_statistics_removed": true
   },
   "psv_round1": {
     "path": "artifacts/psv_round1.pt.gz",
-    "sha256": "e3869e837b534495bd97d534189918ff85b16484eca33efe615ac234035461ac",
+    "sha256": "964fae4e3d18b4f732b8120f55d579f27ad5608062da2db2d52a1e9e26c8b016",
     "source_sha256": "17a7bdd2fd6643a0fdc60905109309421ce20ffda20f50f632638b49016abb3e",
     "metadata_anonymized": true,
-    "tensors_unchanged": true
+    "tensors_unchanged": true,
+    "result_statistics_removed": true
   }
 }
