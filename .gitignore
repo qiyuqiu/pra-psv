@@ -13,3 +13,10 @@ models/
 *.log
 .DS_Store
 
+
+# Keep generated experimental results out of the published code repository.
+/reports/
+/results/
+/outputs/
+**/training_report.json
+**/evaluation_report.json

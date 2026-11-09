@@ -15,7 +15,6 @@ This repository contains the two methods, their training objectives, causal feat
 | PSV | Four text views, 44 numeric features, train-only PCA, three-member benefit ensemble, support and disagreement checks, balanced review policy |
 | Reference artifacts | Qwen7B PRA-DH/PRA-AD heads, both PSV fitting-round checkpoints, both cached pair rounds |
 | AgentDojo integration | Pre-execution gate and adapter to the authors' AttriGuard attenuation/survival implementation |
-| Result accounting | PRA/PSV aggregate snapshot for the accepted AD comparison; accounting rules described below |
 
 The supplied pretrained selector is the **original balanced Qwen7B reference**, with source checkpoint SHA-256 `17a7bdd2fd6643a0fdc60905109309421ce20ffda20f50f632638b49016abb3e`. The PRA-AD source checkpoint is `0deee2b76649bfcc30e93c9abcaf8367f9264126dd7d3783b4dca45d20d2f977`.
 
@@ -71,7 +70,6 @@ artifacts/                anonymized reference checkpoints and hashes
 data/pra_ad/              PRA-only action-state cache
 data/psv/                 two rounds of cached training/selection pairs
 configs/                  reference working points and hyperparameters
-reports/                  frozen PRA/PSV aggregate comparison
 docs/                     integration, data and reproduction details
 examples/                 executable CPU feature demonstration
 tests/                    policy, leakage, checkpoint and integration controls
@@ -176,22 +174,15 @@ The caller provides actor, attenuation and judge pipelines, the local encoder, a
 
 The adapter preserves current-batch visibility, handles invalid tool names before execution, reuses one shadow batch within an actor turn, and follows PRA or the reviewer before invoking a tool. It does not implement API transport, model serving, resource scheduling, benchmark task reconstruction or a one-command reproduction of the entire paper. The portable integration itself has not been re-evaluated over 1,770 GPU episodes as part of packaging.
 
-## 8. Evaluation accounting
+## 8. Evaluation interfaces
+
+Experimental result tables, aggregate reports and per-episode evaluation outputs are not included in this release.
 
 DH task detection is timely only if the first alarm occurs by the annotated harm step; alarms on a single-subtask prefix do not count. Thresholds are selected on validation, not test data. `pra/dh/metrics.py` implements task F1, FPR and the low-FPR working point.
 
-AD benchmark outcomes are attack success `A` and user completion `U`; safe completion is `U * (1 - A)`. The paper's current comparison fixes each backbone's undefended-valid keys for every method. Within that cohort, indeterminate attacked outcomes receive `A=1,U=0,Safe=0`; indeterminate clean outcomes receive `A=0,U=0,Safe=0`. ASR uses attacked episodes, Safe uses all retained episodes, and clean utility uses only clean episodes. These conservative assigned outcomes must be distinguished from observed attack successes.
+AD evaluation uses attack success `A`, user completion `U`, and safe completion `U * (1 - A)`. ASR uses attacked episodes, Safe uses all retained episodes, and clean utility uses only clean episodes. Any new evaluation must document its cohort and distinguish observed outcomes from conservative assignments for indeterminate episodes.
 
-| Backbone | All retained | Attacked | Clean |
-|---|---:|---:|---:|
-| Qwen7B | 1506 | 1482 | 24 |
-| Qwen14B | 1460 | 1436 | 24 |
-| Qwen32B | 1754 | 1724 | 30 |
-| API actor | 1761 | 1731 | 30 |
-
-`reports/agentdojo_pra_psv.json` records the PRA/PSV aggregate comparison. Qwen14B PSV includes a user-supplied aggregate correction of three counted attacks: `81/1436 = 5.64%`; case IDs were unavailable, so original records were not relabeled and no additional Safe credit was assigned. Qwen32B uses a previously disclosed targeted 61-case replacement. Other current rows use their original outcome sources. Neither these aggregates nor the released Qwen7B training caches alone reproduce every model's raw evaluation.
-
-Costs use separate matched samples and must not be inferred from outcome denominators. Shared hardware, API waits, retries and feature caching affect episode time; cached CPU inference is not a paper speedup measurement. This packaging work produces no new efficacy, latency or statistical-significance claim.
+Costs must be measured from the corresponding execution records. Shared hardware, API waits and feature caching affect episode time; cached CPU inference is not an end-to-end speed measurement.
 
 ## 9. Integrity, anonymity and attribution
 
