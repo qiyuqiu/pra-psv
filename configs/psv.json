@@ -1,0 +1,26 @@
+{
+  "paper_method": "PSV",
+  "full_name": "PRA-guided Selective Verification",
+  "pra_threshold": 0.89,
+  "margin_cutoff": 0.2140339875221252,
+  "maximum_actual_reviews": null,
+  "learned_support_prior_reviews_exclusive_max": 2,
+  "beyond_learned_support": "fixed_margin_only",
+  "tool_category_alone_triggers_review": false,
+  "backbone": "Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "dtype": "bfloat16",
+  "actor_max_tokens": 512,
+  "actor_context": 32768,
+  "prefix_visibility_max_tokens": 8192,
+  "feature_encoder_max_tokens": 512,
+  "max_execution_rounds": 15,
+  "temperature": 0,
+  "evaluation_inventory": 1770,
+  "clean": 30,
+  "attacks_each": 290,
+  "reviewer": {
+    "attenuation_level": 2,
+    "survival_mode": "fuzzy"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "feature_tokens": 512,
+  "width": 512,
+  "step_scale": 16,
+  "epochs": 10,
+  "lr": 0.0002,
+  "batch_size": 16,
+  "seed": 11,
+  "kd_weight": 0.3,
+  "positive_floor": 0.7,
+  "benign_max_weight": 1.0,
+  "thresholds": {
+    "Qwen7B": 0.85,
+    "Qwen14B": 0.8,
+    "Llama8B": 0.75,
+    "Mistral7B": 0.3
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "method": "PRA",
+  "dataset": "AD",
+  "initialization": "PRA-DH",
+  "checkpoint_sha256": "0deee2b76649bfcc30e93c9abcaf8367f9264126dd7d3783b4dca45d20d2f977",
+  "threshold": 0.89,
+  "train_rows": 165,
+  "validation_select_rows": 57,
+  "validation_audit_rows": 61,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 20,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "batch_size": 32,
+  "gradient_clip": 1,
+  "backbone_frozen": true
+}
