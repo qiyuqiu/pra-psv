@@ -1,0 +1,162 @@
+{
+  "Qwen7B": {
+    "cohort_n": 1506,
+    "attacked_n": 1482,
+    "clean_n": 24,
+    "methods": {
+      "PRA": {
+        "cohort_n": 1506,
+        "attacked_n": 1482,
+        "clean_n": 24,
+        "method_valid": 1488,
+        "unknown": 18,
+        "unknown_attacked": 18,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 80,
+        "conservative_attack_success": 98,
+        "utility_success": 567,
+        "safe_success": 548,
+        "ASR": 6.612685560053981,
+        "Safe": 36.387782204515275,
+        "Utility": 37.64940239043825
+      },
+      "PSV": {
+        "cohort_n": 1506,
+        "attacked_n": 1482,
+        "clean_n": 24,
+        "method_valid": 1481,
+        "unknown": 25,
+        "unknown_attacked": 25,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 68,
+        "conservative_attack_success": 93,
+        "utility_success": 634,
+        "safe_success": 614,
+        "ASR": 6.275303643724697,
+        "Safe": 40.77025232403719,
+        "Utility": 42.09827357237716
+      }
+    }
+  },
+  "Qwen14B": {
+    "cohort_n": 1460,
+    "attacked_n": 1436,
+    "clean_n": 24,
+    "methods": {
+      "PRA": {
+        "cohort_n": 1460,
+        "attacked_n": 1436,
+        "clean_n": 24,
+        "method_valid": 1448,
+        "unknown": 12,
+        "unknown_attacked": 11,
+        "unknown_clean": 1,
+        "confirmed_attack_success": 71,
+        "conservative_attack_success": 82,
+        "utility_success": 621,
+        "safe_success": 603,
+        "ASR": 5.710306406685237,
+        "Safe": 41.3013698630137,
+        "Utility": 42.534246575342465
+      },
+      "PSV": {
+        "cohort_n": 1460,
+        "attacked_n": 1436,
+        "clean_n": 24,
+        "method_valid": 1446,
+        "unknown": 14,
+        "unknown_attacked": 14,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 70,
+        "conservative_attack_success": 81,
+        "utility_success": 732,
+        "safe_success": 709,
+        "ASR": 5.64066852367688,
+        "Safe": 48.56164383561644,
+        "Utility": 50.136986301369866,
+        "manual_aggregate_attack_correction": -3,
+        "uncorrected_attack_numerator": 84,
+        "manual_case_ids_available": false,
+        "Safe_unchanged_no_extra_credit": true
+      }
+    }
+  },
+  "Qwen32B": {
+    "cohort_n": 1754,
+    "attacked_n": 1724,
+    "clean_n": 30,
+    "methods": {
+      "PRA": {
+        "cohort_n": 1754,
+        "attacked_n": 1724,
+        "clean_n": 30,
+        "method_valid": 1746,
+        "unknown": 8,
+        "unknown_attacked": 7,
+        "unknown_clean": 1,
+        "confirmed_attack_success": 110,
+        "conservative_attack_success": 117,
+        "utility_success": 924,
+        "safe_success": 886,
+        "ASR": 6.786542923433875,
+        "Safe": 50.51311288483466,
+        "Utility": 52.679589509692136
+      },
+      "PSV": {
+        "cohort_n": 1754,
+        "attacked_n": 1724,
+        "clean_n": 30,
+        "method_valid": 1742,
+        "unknown": 12,
+        "unknown_attacked": 12,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 95,
+        "conservative_attack_success": 107,
+        "utility_success": 1070,
+        "safe_success": 1038,
+        "ASR": 6.206496519721577,
+        "Safe": 59.179019384264535,
+        "Utility": 61.00342075256557
+      }
+    }
+  },
+  "Luna": {
+    "cohort_n": 1761,
+    "attacked_n": 1731,
+    "clean_n": 30,
+    "methods": {
+      "PRA": {
+        "cohort_n": 1761,
+        "attacked_n": 1731,
+        "clean_n": 30,
+        "method_valid": 1753,
+        "unknown": 8,
+        "unknown_attacked": 8,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 25,
+        "conservative_attack_success": 33,
+        "utility_success": 1355,
+        "safe_success": 1355,
+        "ASR": 1.9064124783362217,
+        "Safe": 76.94491766042022,
+        "Utility": 76.94491766042022
+      },
+      "PSV": {
+        "cohort_n": 1761,
+        "attacked_n": 1731,
+        "clean_n": 30,
+        "method_valid": 1749,
+        "unknown": 12,
+        "unknown_attacked": 12,
+        "unknown_clean": 0,
+        "confirmed_attack_success": 13,
+        "conservative_attack_success": 25,
+        "utility_success": 1467,
+        "safe_success": 1466,
+        "ASR": 1.4442518775274409,
+        "Safe": 83.2481544576945,
+        "Utility": 83.30494037478705
+      }
+    }
+  }
+}
