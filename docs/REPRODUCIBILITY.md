@@ -24,7 +24,7 @@ The AD action labels combine benchmark-confirmed attack-goal transitions and wea
 
 Task-level train/selection/audit groups are separate. Three held-out attack strategies are not used for training. Historical benchmark development and previously inspected test results limit claims of independent generalization; this artifact does not erase that history or present new blind evaluation.
 
-Aggregate comparisons use the accepted conservative accounting protocol. Unknown counts and unequal trace availability can affect ASR. Manual Qwen14B correction and targeted Qwen32B replacement are explicitly preserved in the aggregate report and do not justify manufacturing raw case labels.
+Experimental result reports and numerical performance comparisons are excluded. Stored training diagnostics are removed from distributed PSV checkpoints; inference weights, preprocessing and decision thresholds are preserved.
 
 ## No implicit execution
 
